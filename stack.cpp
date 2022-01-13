@@ -29,7 +29,7 @@ void* Stack::pop()
 
 void* Stack::top()
 {
-	void* data =  pTop->data;
+   void* data =  pTop->data;
 	return data;
 }
 

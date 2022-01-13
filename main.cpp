@@ -20,19 +20,66 @@ void toh(int n)
     {
 		//d.setSize(i);
 		Disc* d = new Disc(i);
-		cout << d->toString();
+		//cout << d->toString();
         t1->push(d);
     }
-
+   
 	// ****  Your Tower of Hanoi solution!
-    cout << "test1" << endl;
+    for (int i = 0; i < (pow(2, n)-1); i++){
+      int a, b, c;
+      a = 0;
+      b = 0;
+      c = 0;
+      cout << t1->empty() << endl;
+      cout << t2->empty() << endl;
+      cout << t3->empty() << endl;
+      cout << "a" << endl;
+      if (!t1->empty())
+         a = ((Disc*)(t1->top()))->getSize();
+      if (!t2->empty())
+         b = ((Disc*)(t2->top()))->getSize();
+      cout << "t" << endl;
+      if (!t3->empty())
+         c = ((Disc*)(t3->top()))->getSize();
+      cout << "b" << endl;
+      if (i%2 == 0){
+         cout << "eworked" << i << endl;
+         if ((a <= b || b==0) && (a <= c || c==0)) {          
+   	      t2->push(t1->pop());
+         } else if ((b <= a || a==0) && (b <= c || c==0)) {
+         	t3->push(t2->pop());
+         } else {
+            t1->push(t3->pop());
+         }
+         cout << "eworked again" << i << endl;
+      }
+      else{
+         cout << "oworked" << i << endl;
+         if (a >= b && a >= c) {
+   	      t3->push(t1->pop());
+         } else if (b >= c	&&	b >= a) {
+         	t1->push(t2->pop());
+         } else {
+            t2->push(t3->pop());
+         }
+         cout << "oworked again" << i << endl;
+      }
+    }
+    
+    if (!t1->empty())
+         cout << ((Disc*)(t1->top()))->getSize() << endl;
+     if (!t2->empty())
+         cout <<((Disc*)(t2->top()))->getSize() << endl;
+     if (!t3->empty())
+         cout <<((Disc*)(t3->top()))->getSize() << endl;
 
+    //cout << ((Disc*)(t1->top()))->getSize() << endl;
 }
 int main()
 {
     int n;
     //cout<<"enter the number of disksn";
-    //cin>>n;
-    toh(n);
+    //cin>>n;    
+    toh(5);
     return 0;
 }
