@@ -2,6 +2,7 @@
 
 Disc::Disc()
 {
+	size = 0;
 }
 
 Disc::Disc(int s)
@@ -9,9 +10,9 @@ Disc::Disc(int s)
 	size = s;
 }
 
-Disc::~Disc()
+/*Disc::~Disc()
 {
-}
+}*/
 
 int Disc::getSize()
 {

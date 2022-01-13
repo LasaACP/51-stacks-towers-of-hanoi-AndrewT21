@@ -1,16 +1,15 @@
-#include<stdio.h>
-#include<iostream>
-#include<math.h>
-#include <stack.h>
-#include "disc.h"
+#include "stack.h"
+
 using namespace std;
+
+
 
 Stack::Stack()
 {
-
+	pTop = NULL;
 }
-/*
-Stack::~Stack()
+
+/*Stack::~Stack()
 {
 	// delete data;
 }
@@ -18,21 +17,25 @@ Stack::~Stack()
 
 void Stack::push(void* inData)
 {
-	// your code
+	Node newNode = Node(inData, pTop);
+	pTop = &newNode;
 }
 void* Stack::pop()
 {
-	// your code
+	void* data =  pTop->data;
+	pTop = pTop->pNext;
+	return data;
 }
 
 void* Stack::top()
 {
-	// your code
+	void* data =  pTop->data;
+	return data;
 }
 
 bool Stack::empty()
 {
-	// your code
+	return (pTop==NULL);
 }
 
 void Stack::display()

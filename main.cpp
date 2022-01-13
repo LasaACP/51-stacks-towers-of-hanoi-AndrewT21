@@ -25,14 +25,14 @@ void toh(int n)
     }
 
 	// ****  Your Tower of Hanoi solution!
-
+    cout << "test1" << endl;
 
 }
 int main()
 {
     int n;
-    cout<<"enter the number of disksn";
-    cin>>n;
+    //cout<<"enter the number of disksn";
+    //cin>>n;
     toh(n);
     return 0;
 }
