@@ -20,10 +20,16 @@ void toh(int n)
     {
 		//d.setSize(i);
 		Disc* d = new Disc(i);
-		//cout << d->toString();
-        t1->push(d);
+		//cout << d->getSize();
+        	t1->push(d);
     }
-   
+//cout << t1->pop() << endl;
+cout << ((Disc*)(t1->top()))->getSize() << endl;
+//t2->push(t1->pop());
+//cout << ((Disc*)(t2->top()))->getSize() << endl;
+
+
+/*
 	// ****  Your Tower of Hanoi solution!
     for (int i = 0; i < (pow(2, n)-1); i++){
       int a, b, c;
@@ -34,13 +40,19 @@ void toh(int n)
       cout << t2->empty() << endl;
       cout << t3->empty() << endl;
       cout << "a" << endl;
-      if (!t1->empty())
-         a = ((Disc*)(t1->top()))->getSize();
-      if (!t2->empty())
-         b = ((Disc*)(t2->top()))->getSize();
+      if (!(t1->empty())){
+         cout << "a" << t1->top() << endl;
+	 a = ((Disc*)(t1->top()))->getSize();
+	 }
+      if (!(t2->empty())){
+         cout << "b" << t2->top() << endl;
+	 b = ((Disc*)(t2->top()))->getSize();
+	 }
       cout << "t" << endl;
-      if (!t3->empty())
-         c = ((Disc*)(t3->top()))->getSize();
+      if (!(t3->empty())){
+      	cout << "b" << t3->top() << endl;
+        c = ((Disc*)(t3->top()))->getSize();
+	}
       cout << "b" << endl;
       if (i%2 == 0){
          cout << "eworked" << i << endl;
@@ -66,14 +78,17 @@ void toh(int n)
       }
     }
     
+
     if (!t1->empty())
          cout << ((Disc*)(t1->top()))->getSize() << endl;
      if (!t2->empty())
          cout <<((Disc*)(t2->top()))->getSize() << endl;
      if (!t3->empty())
          cout <<((Disc*)(t3->top()))->getSize() << endl;
+ 
+   cout << ((Disc*)(t1->top()))->getSize() << endl;
+	*/
 
-    //cout << ((Disc*)(t1->top()))->getSize() << endl;
 }
 int main()
 {
