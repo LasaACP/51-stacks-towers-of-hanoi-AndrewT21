@@ -17,22 +17,19 @@ Stack::Stack()
 
 void Stack::push(void* inData)
 {
-	//cout << pTop << endl;
 	Node* newNode = new Node(inData, pTop);
 	pTop = newNode;
 }
 void* Stack::pop()
 {
 	void* data =  pTop->data;
-	//cout << ((Disc*)(pTop->data))->getSize() << endl;
-	//cout << ((Disc*)(pTop->pNext->data))->getSize() << endl;
 	pTop = pTop->pNext;
 	return data;
 }
 
 void* Stack::top()
 {
-   return pTop->getpNext()->getpNext()->getpNext()->data;
+   return pTop->data;
 }
 
 bool Stack::empty()
