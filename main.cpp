@@ -10,12 +10,11 @@ void toh(int n)
 {
     int i, x;
 	Disc* a;
-	Disc* b;
-	Stack* t1 = new Stack();
-	Stack* t2 = new Stack();
-	Stack* t3 = new Stack();
+	Disc* b;;
+	Stack* t1 = (Stack*) malloc(sizeof(Stack));
+	Stack* t2 = (Stack*) malloc(sizeof(Stack));
+	Stack* t3 = (Stack*) malloc(sizeof(Stack));
 	
-
     for (i = n; i >= 1; i--)
     {
 		//d.setSize(i);
@@ -91,8 +90,9 @@ void toh(int n)
     t3->display();
  
    //cout << ((Disc*)(t1->top()))->getSize() << endl;
-	
-
+  free(t1);
+  free(t2);
+  free(t3);
 }
 int main()
 {
