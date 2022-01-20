@@ -25,13 +25,13 @@ void toh(int n)
     }
 
 
-if (!t1->empty())
+      /*if (!t1->empty())
         cout << 1 << " " << ((Disc*)(t1->top()))->getSize() << endl;
       if (!t2->empty())
         cout << 2 << " " << ((Disc*)(t2->top()))->getSize() << endl;
       if (!t3->empty())
         cout << 3 << " " << ((Disc*)(t3->top()))->getSize() << endl;
-
+*/
 	// ****  Your Tower of Hanoi solution!
     for (int i = 0; i < (pow(2, n)-1); i++){
       int a, b, c;
@@ -73,8 +73,8 @@ if (!t1->empty())
       if (!t2->empty())
         cout << 2 << " " << ((Disc*)(t2->top()))->getSize() << endl;
       if (!t3->empty())
-        cout << 3 << " " << ((Disc*)(t3->top()))->getSize() << endl;*/
-      cout << "i = " << i << endl;
+        cout << 3 << " " << ((Disc*)(t3->top()))->getSize() << endl;
+      cout << "i = " << i << endl;*/
     }
     
     t1->display();
@@ -88,7 +88,7 @@ if (!t1->empty())
 int main()
 {
     int n;
-    cout<<"enter the number of disksn";
+    cout<<"enter the number of disks in ";
     cin>>n;    
     toh(n);
     return 0;
