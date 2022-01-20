@@ -23,7 +23,13 @@ void toh(int n)
 		//cout << d->getSize();
         	t1->push(d);
     }
-
+    cout << "before run" << endl;
+    cout << "t1: ";
+    t1->display();
+    cout << "t2: ";
+    t2->display();
+    cout << "t3: ";
+    t3->display();
 
       /*if (!t1->empty())
         cout << 1 << " " << ((Disc*)(t1->top()))->getSize() << endl;
@@ -76,9 +82,12 @@ void toh(int n)
         cout << 3 << " " << ((Disc*)(t3->top()))->getSize() << endl;
       cout << "i = " << i << endl;*/
     }
-    
+    cout << "after run" << endl;
+    cout << "t1: ";
     t1->display();
+    cout << "t2: ";
     t2->display();
+    cout << "t3: ";
     t3->display();
  
    //cout << ((Disc*)(t1->top()))->getSize() << endl;
