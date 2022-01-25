@@ -72,25 +72,17 @@ void toh(int n)
         else
           t2->push(t3->pop());
       }
-      /*cout << "_____________" << endl;
-      if (!t1->empty())
-        cout << 1 << " " << ((Disc*)(t1->top()))->getSize() << endl;
-      if (!t2->empty())
-        cout << 2 << " " << ((Disc*)(t2->top()))->getSize() << endl;
-      if (!t3->empty())
-        cout << 3 << " " << ((Disc*)(t3->top()))->getSize() << endl;
-      cout << "i = " << i << endl;*/
+      cout << "after turn: " << i+1 << endl;
+      cout << "t1: ";
+      t1->display();
+      cout << "t2: ";
+      t2->display();
+      cout << "t3: ";
+      t3->display();
     }
-    cout << "after run" << endl;
-    cout << "t1: ";
-    t1->display();
-    cout << "t2: ";
-    t2->display();
-    cout << "t3: ";
-    t3->display();
  
    //cout << ((Disc*)(t1->top()))->getSize() << endl;
-  free(t1);
+	free(t1);
   free(t2);
   free(t3);
 }
